@@ -1,0 +1,79 @@
+.gallery-two {
+
+    .gallery-box {
+        display: flex;
+        padding: 15px 15px;
+
+        .box-wrap {
+            padding: 15px 15px;
+
+            .box-wrapper {
+                width: 100%;
+                position: relative;
+
+                img {
+                    border-radius: 10px;
+                    -webkit-border-radius: 10px;
+                    -moz-border-radius: 10px;
+                    -ms-border-radius: 10px;
+                    -o-border-radius: 10px; 
+                }
+
+                .box-content {
+                    position: absolute;
+                    left: 5%;
+                    top: 5%;
+                    right: 5%;
+                    bottom: 5%;
+                    background: rgba(237, 49, 45, .9);
+                    width: 90%;
+                    height: 90%;
+                    text-align: center;
+                    border-radius: 10px;
+                    -webkit-border-radius: 10px;
+                    -moz-border-radius: 10px;
+                    -ms-border-radius: 10px;
+                    -o-border-radius: 10px;
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: all .4s ease-in-out;
+                    -webkit-transition: all .4s ease-in-out;
+                    -moz-transition: all .4s ease-in-out;
+                    -ms-transition: all .4s ease-in-out;
+                    -o-transition: all .4s ease-in-out;
+
+                    .box-content-icon {
+                        font-size: 26px;
+                        padding: 2px 12px;
+                        background: var(--color-white);
+                        color: var(--color-dark);
+                        display: inline-block;
+                        border-radius: 50%;
+                        -webkit-border-radius: 50%;
+                        -moz-border-radius: 50%;
+                        -ms-border-radius: 50%;
+                        -o-border-radius: 50%;
+                        position: relative;
+                        top: 35%;
+                        cursor: pointer;
+                    }
+                    .box-content-text {
+                        position: relative;
+                        top: 38%;
+                        cursor: pointer;
+                        h4 {
+                            color: var(--color-white);
+                        }
+                    }
+                }
+
+                &:hover {
+                    .box-content {
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

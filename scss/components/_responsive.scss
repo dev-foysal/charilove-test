@@ -1,0 +1,41 @@
+//common responsive 
+
+@media (max-width:1024px) {
+    .section-padding {
+      padding: 100px 0;
+    }
+  }
+  @media (max-width:768px) {
+
+    .section-padding {
+      padding: 50PX 0 !important;
+    }
+    .container {
+      padding: 0 20px !important;
+    }
+    h4 {
+      font-size: 24px !important;
+    }
+    .sub-heading {
+      font-size: 16px !important;
+    }
+
+    .heading {
+      font-size: 30px !important;
+    }
+  }
+
+  @media (max-width:450px) {
+    .heading {
+      padding: 0px 0 20px 0 !important;
+      font-size: 26px !important;
+    }
+    p {
+      font-size: 15px !important;
+    }
+  }
+  @media (max-width:320px) {
+    p {
+      font-size: 14px !important;
+    }
+  }

@@ -1,0 +1,14 @@
+//brand area
+.brand-two {
+    background: url(../../assets/images/h2-brand-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+
+    .brand-wrapper {
+        display: flex;
+        padding: 100px 0;
+        align-items: center;
+        justify-content: space-between;
+    }
+}

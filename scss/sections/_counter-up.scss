@@ -1,0 +1,98 @@
+.counter-up {
+    position: relative;
+    
+  
+      .counter-up-title {
+        margin-top: 150px;
+        padding-right: 100px;
+        position: relative;
+        z-index: 1;
+  
+        .heading {
+          color: var(--color-white);
+        }
+      }
+  
+      .counter-content {
+        position: relative;
+        z-index: 1;
+        margin: 100px 0;
+        .box-01 {
+          background: url(../images/counter-bg-01.png) ;
+          width: 100%;
+          height: 250px;
+          object-fit: cover;
+          background-repeat: no-repeat;
+          background-position: center center;
+        }
+        .box-02 {
+          background: url(../images/counter-bg-02.png) ;
+          width: 100%;
+          height: 250px;
+          object-fit: cover;
+          background-repeat: no-repeat;
+          background-position: center center;
+        }
+        .box-03 {
+          background: url(../images/counter-bg-03.png) ;
+          width: 100%;
+          height: 250px;
+          object-fit: cover;
+          background-repeat: no-repeat;
+          background-position: center center;
+        }
+        .counter-box {
+          padding-top: 70px;
+  
+          span {
+            font-size: 70px;
+            font-family: var(--font-primary);
+            font-weight: --p-bold;
+            color: var(--color-white);
+          }
+        }
+        .counter-text {
+          font-size: 22px;
+          color: var(--color-white);
+          text-align: center;
+          text-transform: capitalize;
+        }
+      }
+  }
+  .parallax-window {
+    min-height: 400px;
+    background: transparent;
+    position: relative;
+    width: 100%;
+  }
+  @media (max-width:1024px) {
+    .counter-up {
+      .counter-up-title {
+        margin-top: 130px;
+      }
+    }
+  }
+  @media (max-width:768px) {
+    .counter-up {
+      .counter-up-title {
+        margin-top: 70px;
+        padding-right: 0;
+        text-align: center !important;
+      }
+  
+      .counter-content {
+        margin-top: 25px;
+  
+        .counter-box {
+          .box-01,
+          .box-02,
+          .box-03 {
+            
+            span {
+              font-size: 50px;
+            }
+          }
+        }
+      }
+    }
+  }
