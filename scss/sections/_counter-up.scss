@@ -96,3 +96,10 @@
       }
     }
   }
+  @media (max-width:450px) {
+    .counter-up {
+      .counter-content {
+        margin-top: 0;
+      }
+    }
+  }

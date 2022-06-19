@@ -2,7 +2,7 @@
 
 	$(document).ready(function(){"use strict";
 		
-		var progressPath = document.querySelector('.rn-progress-parent path');
+		var progressPath = document.querySelector('.charilove-progress-parent path');
 		var pathLength = progressPath.getTotalLength();
 		progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
 		progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
@@ -21,12 +21,12 @@
 		var duration = 550;
 		jQuery(window).on('scroll', function() {
 			if (jQuery(this).scrollTop() > offset) {
-				jQuery('.rn-progress-parent').addClass('rn-backto-top-active');
+				jQuery('.charilove-progress-parent').addClass('cl-backto-top-active');
 			} else {
-				jQuery('.rn-progress-parent').removeClass('rn-backto-top-active');
+				jQuery('.charilove-progress-parent').removeClass('cl-backto-top-active');
 			}
 		});				
-		jQuery('.rn-progress-parent').on('click', function(event) {
+		jQuery('.charilove-progress-parent').on('click', function(event) {
 			event.preventDefault();
 			jQuery('html, body').animate({scrollTop: 0}, duration);
 			return false;
