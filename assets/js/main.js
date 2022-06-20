@@ -246,7 +246,7 @@
        }
    });
  
-     //testimonials slider
+     //testimonials slider home-01
      var testimonialSlider = $('.teslimonials-slider-wrap');
        testimonialSlider.owlCarousel({
          loop:true,
@@ -279,16 +279,38 @@
          selector.trigger('prev.owl.carousel');
        });
 
-       new WOW().init();
+       //testimonials slider home-02
+     var testimonialSlider = $('.teslimonials-two-slider-wrap');
+     testimonialSlider.owlCarousel({
+       loop:true,
+       margin:10,
+       dots: false,
+       nav:false,
+       autoplay: false,
+       items: 1, 
+     })
+     var selector = $('.teslimonials-two-slider-wrap');
 
-       wow = new WOW(
-       {
-       boxClass:     'wow',      // default
-       animateClass: 'animated', // default
-       offset:       0,          // default
-       mobile:       true,       // default
-       live:         true        // default
-       }
-       )
-       wow.init();
-    
+     $('.testimonials-next-button').click(function() {
+       selector.trigger('next.owl.carousel');
+     });
+
+     $('.testimonials-prev-button').click(function() {
+       selector.trigger('prev.owl.carousel');
+     });
+
+    //    new WOW().init();
+
+    //    wow = new WOW(
+    //    {
+    //    boxClass:     'wow',      // default
+    //    animateClass: 'animated', // default
+    //    offset:       0,          // default
+    //    mobile:       true,       // default
+    //    live:         true        // default
+    //    }
+    //    )
+    //    wow.init();
+    (function($){
+        new WOW().init();
+    })(jQuery);
