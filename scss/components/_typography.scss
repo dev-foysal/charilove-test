@@ -27,7 +27,6 @@ body {
     padding: 0;
 }
 
-
 h1,
 h2,
 h3,
@@ -225,8 +224,8 @@ h4 {
  
   p {
     font-size: var(--font-size-b2);
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 500;
+    font-family: var(--font-secondary);
+    font-weight: var(--p-medium);
     color: #6e6e6e;
     line-height: 1.625;
   }
@@ -236,14 +235,11 @@ h4 {
     font-family: 'Dosis', sans-serif;
     font-weight: 600;
     text-transform: capitalize;
-    
-  background: #ed312d; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #ed312d 16%, #f79a29 100%); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #ed312d 16%, #f79a29 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-
+	background: #ed312d;
+	background:linear-gradient(to right, #ed312d 0%, #ffa940 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   }
   
   .heading {
@@ -258,5 +254,4 @@ h4 {
   .section-padding {
     padding: 120px 0;
   }
-
   

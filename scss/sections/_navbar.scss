@@ -170,6 +170,21 @@
             }
         } 
     }
+    // &.header-fullwidth {
+    //     .header-mainmenu,
+    //     .header-top-bar {
+    //         padding-left: 62px;
+    //         padding-right: 62px;
+    //         @media only screen and (max-width: 1699px) {
+    //             padding-left: 22px;
+    //             padding-right: 22px;     
+    //         }
+    //         @media only screen and (max-width: 767px) {
+    //             padding-left: 0;
+    //             padding-right: 0; 
+    //         }
+    //     }
+    // }
 }
 
 @keyframes headerSticky {
@@ -237,7 +252,7 @@
     Header Style Two  
 --------------------------*/
 .header-style-2 {
-    padding: 0 200px;
+    padding: 0 100px;
     
     @media(min-width: 1200px) and (max-width: 1599px) {
         padding: 0 30px;
@@ -255,10 +270,11 @@
         padding: 0 15px;
     }
 }
+
 .header-menu-bar {
     display: flex;
     align-items: center;
-    justify-content: space-between !important;
+    justify-content: space-between;
     position: relative;
 
     &::before {

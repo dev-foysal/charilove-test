@@ -1,9 +1,14 @@
 .about {
     padding-bottom: 120px;
+    padding-top: 90px;
+
+    @media (max-width:991px) {
+      padding-top: 0;
+    }
     .about-left-content {
       
       .about-left-content-thumb-01 {
-        padding-top: 70px;
+        // padding-top: 70px;
         position: relative;
         z-index: 1;
     
@@ -20,34 +25,41 @@
         }
   
         .about-left-content-shape-01 {
-          
-          img {
-            position: absolute;
-            left: -77px;
-            bottom: -110px;
-            z-index: -1;
+          position: absolute;
+          left: -77px;
+          bottom: -110px;
+          z-index: -1;
+
+          @media (max-width:1023px) {
+            display: none;
           }
         }
-      }  
-  
-      .about-left-content-line {
-  
-        img {
+        .about-left-content-line {
           position: absolute;
-          top: 0;
+          top: -20%;
           right: 13%;
+
+          @media (max-width:1023px) {
+            display: none;
+          }
         }
-      }
+        @media (max-width:991px) {
+          display: none;
+        }
+      }  
   
       .about-left-content-shape-03 {
         
         img {
           position: absolute;
-          top: -1%;
+          top: -19%;
           right: 35px;
           z-index: -1;
           animation: rotating 5s infinite;
         -webkit-animation: rotating 5s infinite;
+        }
+        @media (max-width:1023px) {
+          display: none;
         }
   
       }
@@ -57,7 +69,7 @@
         img {
           position: absolute;
           right: 15px;
-          margin-top: -90px;
+          margin-top: -100px;
           overflow: hidden;
           z-index: 1;
           -webkit-border-radius: 20px;
@@ -78,7 +90,6 @@
     }
   
     .about-right-content {
-      padding-top: 70px;
       padding-left: 30px;
   
       .heading {
@@ -137,6 +148,7 @@
           .tab-content-box {
   
             .box {
+              padding-bottom: 15px;
 
               span {
                 font-size: 20px;
@@ -156,6 +168,7 @@
               .tab-wrap-btn {
                 color: var(--color-white) !important;
                 padding: 15px 40px;
+                margin-top: 10px;
                 -webkit-box-shadow: 0px 25px 60px 0px rgba(192, 36, 33, 0.3); 
                 box-shadow: 0px 25px 60px 0px rgba(192, 36, 33, 0.3);
               }
@@ -183,43 +196,56 @@
   
     .about-two-content-left {
       .para {
-        margin: 45px 0;
+        margin: 35px 0 40px 0;
         max-width: 600px;
       }
-      .about-two-icon {
-        margin-bottom: 20px;
+      .about-service {
+        display: flex;
+        flex-wrap: nowrap;
 
-        .about-icon-h2-1,
-        .about-icon-h2-2 {
-          display: inline-block;
-          padding: 20px 20px;
-          -webkit-border-radius: 20px;
-          -webkit-border-top-right-radius: 40px;
-          -webkit-border-bottom-left-radius: 40px;
-          -moz-border-radius: 20px;
-          -moz-border-radius-topright: 40px;
-          -moz-border-radius-bottomleft: 40px;
-          border-radius: 20px;
-          border-top-right-radius: 40px;
-          border-bottom-left-radius: 40px;
-          transition: all .3s ease-in-out;
-          -webkit-transition: all .3s ease-in-out;
-          -moz-transition: all .3s ease-in-out;
-          -ms-transition: all .3s ease-in-out;
-          -o-transition: all .3s ease-in-out;
+        .about-two-icon {
+          margin-bottom: 20px;
+  
+          .about-icon-h2-1,
+          .about-icon-h2-2 {
+            display: inline-block;
+            padding: 20px 20px;
+            -webkit-border-radius: 20px;
+            -webkit-border-top-right-radius: 40px;
+            -webkit-border-bottom-left-radius: 40px;
+            -moz-border-radius: 20px;
+            -moz-border-radius-topright: 40px;
+            -moz-border-radius-bottomleft: 40px;
+            border-radius: 20px;
+            border-top-right-radius: 40px;
+            border-bottom-left-radius: 40px;
+            transition: all .3s ease-in-out;
+            -webkit-transition: all .3s ease-in-out;
+            -moz-transition: all .3s ease-in-out;
+            -ms-transition: all .3s ease-in-out;
+            -o-transition: all .3s ease-in-out;
+          }
+          
+          .about-icon-h2-1 {
+            font-size: 55px;
+            color: var(--color-primary);
+            background: rgba(237, 49, 45, .1);
+          }
+          .about-icon-h2-2 {
+            font-size: 55px;
+            color: var(--color-success);
+            background: rgba(0, 189, 192, .1);
+          }
         }
-        
-        .about-icon-h2-1 {
-          font-size: 55px;
-          color: var(--color-primary);
-          background: rgba(237, 49, 45, .1);
-        }
-        .about-icon-h2-2 {
-          font-size: 55px;
-          color: var(--color-success);
-          background: rgba(0, 189, 192, .1);
+        @media (max-width:450px) {
+          display: block;
+
+          .about-service-box {
+            margin-bottom: 30px;
+          }
         }
       }
+      
       .about-h2-title {
         font-size: 22px;
       }
@@ -227,7 +253,7 @@
         max-width: 250px;
       }
       .about-two-content-left-thumb {
-        margin-top: 70px;
+        margin-top: 90px;
 
         img {
           -webkit-border-radius: 20px;
@@ -241,12 +267,25 @@
           border-bottom-left-radius: 70px;
         }
       }
+      @media (max-width:768px) {
+        .para {
+          margin: 25px 0 40px 0;
+        }
+        .about-two-content-left-thumb {
+          margin-top: 40px;
+        }
+      }
     }
     .about-two-content-right {
 
+      .about-two-content-right-text {
+        padding-right: 50px;
+        padding-top: 25px;
+      }
+
       .about-two-content-right-thumb {
         padding-top: 10px;
-        margin-bottom: 140px;
+        margin-bottom: 120px;
         position: relative;
         img {
           -webkit-border-radius: 20px;
@@ -265,12 +304,27 @@
           left: -10%;
           bottom: -8%;
         }
+        @media (max-width:768px) {
+          margin-bottom: 100px;
+
+          .about-two-content-right-shape {
+            left: -5%;
+          }
+        }
+        @media (max-width: 450px) {
+          margin-bottom: 30px;
+
+          .about-two-content-right-shape {
+            display: none;
+          }
+        }
       }
 
       .about-two-content-right-box {
         padding-top: 20px;
 
         .box {
+          padding-bottom: 10px;
 
           span {
             font-size: 20px;
@@ -285,7 +339,7 @@
           }
         }
         .about-two-content-btn {
-          margin-top: 30px;
+          margin-top: 20px;
 
           .about-two-wrap-btn {
             color: var(--color-white) !important;
@@ -303,34 +357,27 @@
       padding-bottom: 80px;
       .about-left-content {
         .about-left-content-thumb-01 {
-          padding-top: 85px;
+          padding-top: 0;
   
           img {
             width: 350px;
           }
+          .about-left-content-line {
+            max-width: 200px;
+            right: 0%;
+          }
         }
         .about-left-content-shape-01 {
-          img {
-            width: 300px;
-            left: -44px !important;
-          }
-        }
-        .about-left-content-line {
-          img {
-            max-width: 200px;
-            right: 4%;
-          }
+          left: -44px !important; 
         }
         .about-left-content-thumb-02 {
-          img {
-            width: 270px;
-            margin-top: -65px;
-          }
+          width: 270px;
+          margin-top: 65px;
         }
       }
   
       .about-right-content {
-        padding-top: 77px;
+        padding-top: 0;
         padding-left: 0;
   
         .heading {
@@ -375,23 +422,10 @@
             width: 100%;
           }
         }
-        .about-left-content-shape-01 {
-          img {
-            left: 0 !important;
-            bottom: -120px;
-          }
-        }
-        .about-left-content-line {
-          display: none;
-        }
-  
-        .about-left-content-thumb-02 {
-          display: none;
-        }
       }
   
       .about-right-content {
-        padding-top: 100px;
+       
         .nav-tabs {
   
           .nav-link {

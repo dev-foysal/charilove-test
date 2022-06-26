@@ -14,6 +14,7 @@
 	font-family: var(--font-secondary);
 	position: relative;
 	overflow: hidden;
+	border: none;
 	z-index: 1;
 	border-radius: 30px;
 	-webkit-border-radius: 30px;
@@ -33,7 +34,8 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-color: var(--color-primary);
+		background: rgb(237,49,45);
+		background: linear-gradient(90deg, rgba(237,49,45,1) 0%, rgba(247,154,41,1) 100%);
 		border-radius: 30px;
         -webkit-border-radius: 30px;
         -moz-border-radius: 30px;
@@ -48,19 +50,20 @@
         left: 0;
         width: 0%;
         height: 100%;
-        background-color: darken(#ed312d, 5%);
+        background: rgb(237,49,45);
+        background: linear-gradient(90deg, rgba(237,49,45,1) 0%, rgba(247,154,41,1) 100%);
         border-radius: 30px;
         -webkit-border-radius: 30px;
         -moz-border-radius: 30px;
         -ms-border-radius: 30px;
         -o-border-radius: 30px;
         z-index: -1;
-        transition: all .4s;
-        -webkit-transition: all .4s;
-        -moz-transition: all .4s;
-        -ms-transition: all .4s;
-        -o-transition: all .4s;
-	}
+        transition: all .6s ease-in-out;
+        -webkit-transition: all .6s ease-in-out;
+        -moz-transition: all .6s ease-in-out;
+        -ms-transition: all .6s ease-in-out;
+        -o-transition: all .6s ease-in-out;
+}
 	&:hover {
         color: var(--color-white);
 		&:before {

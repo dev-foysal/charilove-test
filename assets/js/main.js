@@ -20,6 +20,7 @@
             chariloveJs.popupMobileMenu();
             chariloveJs.searchPopup();
             chariloveJs.contactForm();
+            chariloveJs.counterUp();
         },
 
         headerSticky: function () {
@@ -34,7 +35,7 @@
 
 
         aboutAnimation: function () {
-            $('#scene').each(function () {
+            $('.scene').each(function () {
                 new Parallax($(this)[0]);
             });
         },
@@ -43,6 +44,21 @@
             sal({
                 threshold: 0.01,
                 once: true,
+            });
+        },
+        counterUp: function () {
+            var elementSelector = $('.odometer');
+            elementSelector.each(function(){
+                elementSelector.appear(function(e) {
+                    var el = this;
+                    var updateData = $(el).attr("data-count");
+                    var od = new Odometer({
+                        el: el,
+                        format: '(,ddd).dd',
+                        duration: 2000
+                    });
+                    od.update(updateData);
+                });
             });
         },
 
@@ -115,6 +131,8 @@
 			});
         },
 
+        
+
 
     }
 
@@ -134,11 +152,11 @@
         ],
         dots: false,
         autoplay: false,
-        animateOut: 'fadeIn',
-        animateOut: 'fadeOut',
-        autoplayHoverPause: true,
-        autoplayTimeout: 5000,
-        smartSpeed: 1200,
+        // animateOut: 'fadeIn',
+        // animateOut: 'fadeOut',
+        // autoplayHoverPause: true,
+        // autoplayTimeout: 3000,
+        // smartSpeed: 1200,
         items: 1
     });
 
@@ -191,33 +209,7 @@
    $('.campaign-prev-button').click(function() {
      selectorAll.trigger('prev.owl.carousel');
    });
-
-   //counter-up
-   $('.parallax-window').parallax({imageSrc: './assets/images/parallex-bg.jpg'});
-   $(document).ready(function() {
-
-     var counters = $(".count");
-     var countersQuantity = counters.length;
-     var counter = [];
-     var i,j;
-     for (i = 0; i < countersQuantity; i++) {
-       counter[i] = parseInt(counters[i].innerHTML);
-     }
    
-     var count = function(start, value, id) {
-       var localStart = start;
-       setInterval(function() {
-         if (localStart < value) {
-           localStart++;
-           counters[id].innerHTML = localStart;
-         }
-       }, 40);
-     }
-   
-     for (j = 0; j < countersQuantity; j++) {
-       count(0, counter[j], j);
-     }
-   });
 
      //team slider
      var teamSlider = $(".team-slider");
@@ -298,19 +290,7 @@
      $('.testimonials-prev-button').click(function() {
        selector.trigger('prev.owl.carousel');
      });
-
-    //    new WOW().init();
-
-    //    wow = new WOW(
-    //    {
-    //    boxClass:     'wow',      // default
-    //    animateClass: 'animated', // default
-    //    offset:       0,          // default
-    //    mobile:       true,       // default
-    //    live:         true        // default
-    //    }
-    //    )
-    //    wow.init();
+     
     (function($){
         new WOW().init();
     })(jQuery);

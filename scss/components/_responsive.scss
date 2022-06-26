@@ -26,6 +26,9 @@
   }
 
   @media (max-width:450px) {
+    .container {
+      padding: 0 15px !important;
+    }
     .heading {
       padding: 0px 0 20px 0 !important;
       font-size: 26px !important;

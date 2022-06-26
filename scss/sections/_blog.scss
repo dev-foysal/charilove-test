@@ -1,5 +1,5 @@
 .blog-area {
-    padding: 40px 0 80px 0;
+    padding: 120px 0;
     .blog-title-content {
       padding-bottom: 50px;
     }
@@ -53,8 +53,8 @@
   
         .blog-card-img-title {
           position: absolute;
-          left: 8%;
-          top: 10%;
+          left: 30px;
+          top: 30px;
           background: var(--color-primary);
           padding: 3px 20px;
           border-radius: 30px;
@@ -99,10 +99,12 @@
         box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.07);
   
         .card-body {
-          padding: 30px 40px 0 35px;
+          padding: 30px 55px 0 35px;
   
           .card-sub-title {
             gap: 7px;
+            padding-bottom: 7px;
+            
             a {
               span {
                 font-size: var(--font-size-b2);
@@ -132,7 +134,7 @@
           }
           .box-container {
             display: flex;
-            gap: 35px;
+            gap: 20px;
             padding: 13px 0 20px 0;
             .box {
               .card-date{
@@ -148,6 +150,9 @@
                 font-family: var(--font-secondary);
               }
             }
+          }
+          .card-text {
+            padding-bottom: 5px;
           }
   
           .card-wrap-btn {

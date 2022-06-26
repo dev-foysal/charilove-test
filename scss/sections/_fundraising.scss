@@ -10,7 +10,9 @@
     }
   
     .card {
-      margin: 0 10px;
+      // margin: 0 10px;
+      margin-right: 10px;
+      -webkit-border-radius: 20px;
       -webkit-border-top-right-radius: 50px;
       -webkit-border-bottom-left-radius: 50px;
       -moz-border-radius: 20px;
@@ -72,7 +74,7 @@
             left: 5%;
             top: 7%;
             background: var(--color-tertiary);
-            padding: 4px 20px;
+            padding: 3px 16px;
             border-radius: 30px;
             -webkit-border-radius: 30px;
             -moz-border-radius: 30px;
@@ -80,11 +82,11 @@
             -o-border-radius: 30px;
   
             span {
-              font-size: var(--font-size-b2);
+              font-size: var(--font-size-b3);
               font-family: var(--font-secondary);
               font-weight: var(--p-semi-bold);
               color: var(--color-white);
-              text-transform: capitalize;
+              text-transform: uppercase;
             }
           }
         }
@@ -277,22 +279,24 @@
           font-size: 26px;
           font-weight: bold;
           line-height: 1.308;
-          margin: 20px 0;
+          margin-bottom: 5px;
         }
   
         .card-text {
-          margin-bottom: 30px;
+          margin-bottom: 20px;
         }
   
         .fundraiseing-content-btn {
-          margin-bottom: 20px;
+          margin-bottom: 4px;
   
           .fundraiseing-wrap-btn {
             padding: 15px 40px;
             color: var(--color-dark);
             
+            
             &::after {
-              background-color: var(--color-extra06) !important;
+              background: #fff !important;
+              border: 1px solid #e5e5e5;
             }
 
 
@@ -306,6 +310,153 @@
       }
     }
   }
+  .fundraising-two {
+    background: #f6f4f1;
+    padding-top: 120px;
+
+    .card-two {
+      -webkit-border-top-left-radius: 20px;
+      -webkit-border-top-right-radius: 50px;
+      -webkit-border-bottom-right-radius: 10px;
+      -webkit-border-bottom-left-radius: 10px;
+      -moz-border-radius-topleft: 20px;
+      -moz-border-radius-topright: 50px;
+      -moz-border-radius-bottomright: 10px;
+      -moz-border-radius-bottomleft: 10px;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 50px;
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+
+      .card-body {
+        .card-thumb {
+          .card-thumb-title-2 {
+            background: var(--color-success);
+          }
+        }
+      }
+    }
+    .card-bottom {
+      margin-top: 10px;
+      -webkit-border-top-left-radius: 10px;
+      -webkit-border-top-right-radius: 10px;
+      -webkit-border-bottom-right-radius: 20px;
+      -webkit-border-bottom-left-radius: 50px;
+      -moz-border-radius-topleft: 10px;
+      -moz-border-radius-topright: 10px;
+      -moz-border-radius-bottomright: 20px;
+      -moz-border-radius-bottomleft: 50px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 50px;
+
+      .card-body {
+       
+        .single-progressbar {
+          margin-bottom: 30px;
+          position: relative;
+  
+          .progress-title {
+            font-size: 22px;
+            text-transform: capitalize;
+          }
+          .progressbar {
+            width: 100%;
+            margin-top: 5px;
+            margin-bottom: 25px;
+            position: relative;
+            overflow: visible;
+          }
+          .proggress {
+            height: 15px;
+            width: 10px;
+            background: #ed312d;
+            background: -webkit-linear-gradient(to right, #ed312d 0%, #f79a29 100%);
+            background: linear-gradient(to right, #ed312d 0%, #f79a29 100%);
+            position: relative;
+            z-index: 1;
+
+            // &::before {
+            //   content: "";
+            //   position: absolute;
+            //   top: -10px;
+            //   right: 0;
+            //   width: 28px;
+            //   height: 28px;
+            //   border: double 8px transparent;
+            //   border-radius: 50%;
+            //   background-image: linear-gradient(white, white), radial-gradient(circle at top left, #ed312d,#f79a29);
+            //   background-origin: border-box;
+            //   background-clip: content-box, border-box;
+            //   display: inline-block;
+            //   box-shadow: 0px 5px 20px 0px rgba(192, 36, 33, 0.3);
+            // }
+            .indicator {
+              position: absolute;
+              right: 0;
+              top: -10px;
+              width: 28px;
+              height: 28px;
+              border: double 8px transparent;
+              border-radius: 50%;
+              background-image: linear-gradient(white, white), radial-gradient(circle at top left, #ed312d,#f79a29);
+              background-origin: border-box;
+              background-clip: content-box, border-box;
+              display: inline-block;
+              box-shadow: 0px 5px 20px 0px rgba(192, 36, 33, 0.3);
+              overflow: visible !important;
+              z-index: 9999;
+            }
+          }
+          .percentCount {
+            clear: both;
+            font-size: 22px;
+            font-family: var(--font-primary);
+            font-weight: var(--p-semi-bold);
+            color: #111117;
+            position: absolute;
+            left: 46%;
+            bottom: -80px;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+          }
+        }
+
+        .box-wrapper {
+          display: flex;
+          justify-content: space-between;
+          .box-wrap {
+            .text {
+              font-size: var(--font-size-b1);
+              text-transform: capitalize;
+
+              i {
+                font-size: var(--font-size-b3);
+                color: var(--color-extra07);
+              }
+            }
+          }
+        }
+      }
+    }
+    @media (max-width:768px) {
+      padding-top: 50px;
+
+      .card-two {
+        margin-bottom: 0 !important;
+
+        .card-bottom {
+          .card-body {
+            padding: 20px 20px !important;
+          }
+        }
+      }
+    }
+  }
   @media (max-width:1024px) {
     .fundraising {
       .fundraising-title-content {
@@ -314,6 +465,7 @@
         }
       }    
       .card {
+        margin-right: 0;
         .card-body {
           .card-thumb {
             .card-thumb-title {
@@ -323,7 +475,7 @@
               }
             }
           }
-          padding: 20px 20px;
+
           .card-counter {
             max-width: 200px;
             padding: 10px 0;
@@ -363,7 +515,7 @@
         margin-bottom: 35px;
   
         .card-body{
-          padding: 30px 20px 0 20px;
+          // padding: 30px 20px 10px 20px;
           .card-counter {
             max-width: 250px;
             padding: 10px 0;
@@ -380,9 +532,7 @@
           .card-title {
             font-size: 22px;
           }
-          .fundraiseing-content-btn {
-            margin-bottom: 30px;
-          }
+          
         }
       }
     }
@@ -400,7 +550,7 @@
         margin-bottom: 35px;
   
         .card-body{
-          padding: 30px 20px 0 20px;
+          // padding: 30px 20px 0 20px;
           .card-counter {
             width: 280px;
             padding: 10px 0;

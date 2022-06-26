@@ -31,7 +31,7 @@
               .card-sub-title {
                 font-size: var(--font-size-b3);
                 color: var(--color-white);
-                font-family: "--font-secondary";
+                font-family: var(--font-secondary);
                 font-weight: var(--p-semi-bold);
                 text-transform: uppercase;
                 display: inline-block;
@@ -246,7 +246,8 @@
           font-size: 18px;
           background:var(--color-white);
           padding: 20px 18px;
-          margin: 0 10px;
+          // margin: 0 10px;
+          margin-left: 10px;
           cursor: pointer;
           -webkit-border-radius: 10px;
           -webkit-border-top-right-radius: 20px;
@@ -305,6 +306,7 @@
       .campaign {
         padding-bottom: 50px;
         .item {
+          padding: 5px;
           .card{
             .card-body{
               padding: 30px 30px;

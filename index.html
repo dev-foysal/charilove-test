@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./assets/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/vandors/animate.css">
     <link rel="stylesheet" href="./assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="./assets/css/vandors/odometer.css">
     <link rel="stylesheet" href="./assets/css/vandors/lightbox.css">
     <link rel="stylesheet" href="./assets/css/vandors/magnifypopup.css">
     <link rel="stylesheet" href="./assets/css/vandors/owl.carousel.min.css">
@@ -26,7 +27,7 @@
 <body>
    
     <div class="main-wrapper">
-        <div class="top-bar">
+        <div class="top-bar ">
             <div class="container">
               <div class="row">
                 <div class="col-6">
@@ -183,8 +184,8 @@
                 <ul class="mainmenu">
                     <li class="has-droupdown"><a href="#">Home</a>
                         <ul class="submenu">
-                            <li><a href="index-one.html">Home 01</a></li>
-                            <li><a href="index-two.html">Home 02</a></li>
+                            <li><a href="index.html">Home 01</a></li>
+                            <li><a href="index-02.html">Home 02</a></li>
                             <li><a href="index-three.html">Home 03</a></li>
                             <li><a href="index-four.html">Home 04</a></li>
                             <li><a href="index-five.html">Home 05</a></li>
@@ -270,26 +271,24 @@
                     <div class="item">
                         <div class="banner-wrap-content ">
                             <div class="banner-wrap-img">
-                                <img src="./assets/images/banner-img-01.jpg" alt="">
+                                <img class="img-fluid" src="./assets/images/banner-img-01.jpg" alt="">
                             </div>
-                            <div class="banner-wrap-shape"></div>
+                            <!-- <div class="banner-wrap-shape"></div> -->
                             <div class="banner-wrap-shape-mask">
-                              <div class="banner-wrap-shape-svg">
-                                <img class="img-fluid" src="./assets/images/BG2.png" alt="">
-                              </div>
+                              <img src="./assets/images/BG2.png" alt="">
                             </div>
-                            <div class="banner-wrap-round-1">
-                              <img src="./assets/images/PT2.svg" alt="picture">
+                            <div class="banner-wrap-round-1 scene">
+                              <img data-depth="1" src="./assets/images/PT2.svg" alt="picture">
                             </div>
-                            <div class="banner-wrap-round-2">
-                              <img src="./assets/images/PT2.svg" alt="">
+                            <div class="banner-wrap-round-2 scene">
+                              <img data-depth="-1" src="./assets/images/PT2.svg" alt="">
                             </div>
                             <div class="container">
                                 <div class="row">
                                     <div class="col-sm-12 col-md-6 col-lg-5 col-xl-8">
                                         <div class="banner-wrap-inner">
                                             <div class="banner-wrap-text">
-                                                <h1>Give Us Your Big Hand</h1>
+                                                <h1>Give Us Your <br> Big Hand</h1>
                                                 <p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
                                                 <div class="banner-wrapper-btn">
                                                   <a href="#" class="edu-btn banner-wrap-btn"> donate now</a>
@@ -305,11 +304,11 @@
                     <div class="item">
                         <div class="banner-wrap-content">
                             <div class="banner-wrap-img">
-                                <img src="./assets/images/banner-img-02.jpg" alt="">
+                                <img class="img-fluid" src="./assets/images/banner-img-02.jpg" alt="">
                             </div>
-                            <div class="banner-wrap-shape"></div>
+                            <!-- <div class="banner-wrap-shape"></div> -->
                             <div class="banner-wrap-shape-mask">
-                              <img class="img-fluid" src="./assets/images/BG2.png" alt="">
+                              <img src="./assets/images/BG2.png" alt="">
                             </div>
                             <div class="banner-wrap-round-1">
                               <img src="./assets/images/PT2.svg" alt="picture">
@@ -322,7 +321,7 @@
                                     <div class="col-sm-12 col-md-6 col-lg-5 col-xl-8">
                                         <div class="banner-wrap-inner">
                                             <div class="banner-wrap-text">
-                                                <h1>Give Us Your Big Hand</h1>
+                                                <h1>Give Us Your <br> Big Hand</h1>
                                                 <p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
                                                 <div class="banner-wrapper-btn">
                                                   <a href="#" class="edu-btn banner-wrap-btn"> donate now</a>
@@ -416,11 +415,11 @@
                         <img src="./assets/images/about-1Children.jpg" alt=" image Children">
                       </div>
                       <ul class="shape-group">
-                        <li class="about-left-content-shape-01">
-                          <img  src="./assets/images/about-shape-01.png" alt=" image shape">
+                        <li class="about-left-content-shape-01 scene">
+                          <img data-depth="1" src="./assets/images/about-shape-01.png" alt=" image shape">
                         </li>
-                        <li class="about-left-content-line">
-                          <img  src="./assets/images/about-line.png" alt=" image line" >
+                        <li class="about-left-content-line scene">
+                          <img data-depth="-1" src="./assets/images/about-line.png" alt=" image line" >
                         </li>
                       </ul>
                     </div>
@@ -697,7 +696,7 @@
     
         <!--Start Fundraising area  -->
     
-        <section class="fundraising">
+        <section class="fundraising ">
         <div class="container">
             <div class="row">
             <div class="col-lg-12" data-sal-delay="100" data-sal="slide-up" data-sal-duration="1000">
@@ -852,7 +851,7 @@
         </div>
 
         <!-- Start Counter-up area -->
-        <section class="counter-up parallax-window" data-parallax="scroll" data-speed=".7" data-image-src="./assets/images/parallex-bg.jpg">
+        <section class="counter-up">
             <div class="container">
               <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-4">
@@ -867,7 +866,7 @@
                       <div class="col-sm-12 col-md-6 col-lg-4">
                         <div class="box-01">
                           <div class="counter-box text-center">
-                            <span class="count">30</span>
+                            <span class="count odometer" data-count="30">30</span>
                           </div>
                         </div>
                         <h4 class="counter-text">Years of Foundation</h4>
@@ -875,7 +874,7 @@
                       <div class="col-sm-12 col-md-6 col-lg-4">
                         <div class="box-02">
                           <div class="counter-box text-center">
-                            <span class="count">6</span><span>k</span>
+                            <span class="count odometer" data-count="6">6</span><span>k</span>
                           </div>
                         </div>
                         <h4 class="counter-text">Years of Foundation</h4>
@@ -883,7 +882,7 @@
                       <div class="col-sm-12 col-md-6 col-lg-4">
                         <div class="box-03">
                           <div class="counter-box text-center">
-                            <span class="count">350</span>
+                            <span class="count odometer" data-count="350">350</span>
                           </div>
                         </div>
                         <h4 class="counter-text">Years of Foundation</h4>
@@ -1023,8 +1022,8 @@
                           </h2>
                           <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                <p>This is the first item's accordion body. It is shown by default, until the collapse plugin add
-                                    the appropriate classes that we use to style each element.
+                                <p>Lorem ipsum dolor sit elit consectur sed eiusmod tempor set aliquat enim minim veniam exercitation ullamco nis laboris aliquip commodo.
+                                  consequat duis aute.
                                 </p>
                             </div>
                           </div>
@@ -1037,8 +1036,8 @@
                           </h2>
                           <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                <p>This is the first item's accordion body. It is shown by default, until the collapse plugin add
-                                    the appropriate classes that we use to style each element. 
+                                <p>Lorem ipsum dolor sit elit consectur sed eiusmod tempor set aliquat enim minim veniam exercitation ullamco nis laboris aliquip commodo.
+                                  consequat duis aute.
                                 </p>
                             </div>
                           </div>
@@ -1051,8 +1050,8 @@
                           </h2>
                           <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                <p>This is the first item's accordion body. It is shown by default, until the collapse plugin add
-                                    the appropriate classes that we use to style each element.
+                                <p>Lorem ipsum dolor sit elit consectur sed eiusmod tempor set aliquat enim minim veniam exercitation ullamco nis laboris aliquip commodo.
+                                  consequat duis aute.
                                 </p>
                             </div>
                           </div>
@@ -1476,7 +1475,11 @@
         <script src="./assets/js/backtotop.js"></script>
         <script src="./assets/js/sal.min.js"></script>
         <script src="./assets/js/wow.js"></script>
+        <script src="./assets/js/jquery.countdown.min.js"></script>
+        <script src="./assets/js/jquery-appear.js"></script>
+        <script src="./assets/js/odometer.js"></script>
         <script src="./assets/js/parallax.js"></script>
+        <script src="./assets/js/parallax.min.js"></script>
         <script src="./assets/js/parallex-scroll.js"></script>
         <script src="./assets/js/jquery-ui.js"></script>
         <script src="./assets/js/plugins.js"></script>
