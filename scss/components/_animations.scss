@@ -118,3 +118,26 @@
       border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%;
   }
 }
+
+//kanburns 
+@keyframes kenburns {
+  0%
+    {
+      transform:scale(1);
+      transition:transform 3000ms linear 0s    ;
+      -webkit-transition:transform 3000ms linear 0s    ;
+      -moz-transition:transform 3000ms linear 0s    ;
+      -ms-transition:transform 3000ms linear 0s    ;
+      -o-transition:transform 3000ms linear 0s    ;
+}
+  100%
+    {
+      transform:scale(1.1);
+      transition:transform 3000ms linear 0s    ;
+      -webkit-transition:transform 3000ms linear 0s    ;
+      -moz-transition:transform 3000ms linear 0s    ;
+      -ms-transition:transform 3000ms linear 0s    ;
+      -o-transition:transform 3000ms linear 0s    ;
+}
+
+}

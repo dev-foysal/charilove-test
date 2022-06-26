@@ -186,6 +186,15 @@
     //     }
     // }
 }
+.header-style-2 {
+    .logo {
+        a {
+            &::after {
+                display: none;
+                }
+            } 
+    }
+}
 
 @keyframes headerSticky {
     0% {
@@ -277,16 +286,37 @@
     justify-content: space-between;
     position: relative;
 
-    &::before {
-        content: "";
-        position: absolute;
-        left: -15%;
-        top: 18%;
-        height: 40px;
-        width: 1px;
-        background-color: rgb(229, 229, 229);
+    .quote-icon {
+        .fa-headphones-simple {
+            margin-left: -150px;
+            font-size: 25px;
+            background:linear-gradient(to right, #ed312d 0%, #ffa940 100%);
+           background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        span {
+            font-size: 20px;
+            font-weight: var(--p-bold);
+            font-family: var(--font-secondary);
+            color: var(--color-dark) !important;
+            margin-left: 10px;
+        }
     }
+    .quote-search {
+        position: relative;
+        margin-left: 20px;
 
+        &::before {
+            content: "";
+            position: absolute;
+            left: -23px;
+            top: -6px;
+            height: 40px;
+            width: 1px;
+            background-color: rgb(229, 229, 229);
+        }
+    }
     .white-box-icon {
         text-align: center;
         outline: none;
@@ -307,7 +337,7 @@
                 -o-transition: all .3s ease-in-out;
 
                 &:hover {
-                    color: var(--color-primary);
+                    color: var(--color-primary) !important;
                 }
             }
         }
@@ -319,9 +349,6 @@
     }
 
 }
-
-
-
 
 
 /*--------------------------

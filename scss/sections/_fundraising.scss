@@ -331,8 +331,13 @@
       .card-body {
         .card-thumb {
           .card-thumb-title-2 {
+            left: 4%;
+            top: 6%;
             background: var(--color-success);
           }
+        }
+        .card-title {
+          padding: 25px 0 10px 0;
         }
       }
     }

@@ -3,10 +3,11 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-
+  position: relative;
+  
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
-  position: relative;
+ 
 
   .counter-up-title {
     margin-top: 150px;

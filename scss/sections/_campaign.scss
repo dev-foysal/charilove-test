@@ -270,6 +270,9 @@
             box-shadow: none;
           }
         }
+        @media (max-width:900px) {
+          display: none !important;
+        }
       }
     }
   }
@@ -345,9 +348,6 @@
               }
             }
           }
-        }
-        .campaign-owl-nav {
-          display: none !important;
         }
       }
     }
