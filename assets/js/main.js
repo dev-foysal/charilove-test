@@ -15,7 +15,7 @@
 
         methods: function (e) {
             chariloveJs.headerSticky();
-            // chariloveJs.aboutAnimation();
+            chariloveJs.aboutAnimation();
             chariloveJs.salActive();
             chariloveJs.popupMobileMenu();
             chariloveJs.searchPopup();
@@ -34,11 +34,11 @@
         },
 
 
-        // aboutAnimation: function () {
-        //     $('.scene').each(function () {
-        //         new Parallax($(this)[0]);
-        //     });
-        // },
+        aboutAnimation: function () {
+            $('.scene').each(function () {
+                new Parallax($(this)[0]);
+            });
+        },
 
         salActive: function () {
             sal({
@@ -151,12 +151,12 @@
             '<span class="icon-7"></span>'
         ],
         dots: false,
-        // autoplay: true,
-        // animateOut: 'fadeIn',
-        // animateOut: 'fadeOut',
-        // autoplayHoverPause: true,
-        // autoplayTimeout: 3000,
-        // smartSpeed: 1200,
+        autoplay: true,
+        animateOut: 'fadeIn',
+        animateOut: 'fadeOut',
+        autoplayHoverPause: true,
+        autoplayTimeout: 3000,
+        smartSpeed: 1200,
         items: 1
     });
 
