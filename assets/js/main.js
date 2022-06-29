@@ -15,7 +15,7 @@
 
         methods: function (e) {
             chariloveJs.headerSticky();
-            chariloveJs.aboutAnimation();
+            // chariloveJs.aboutAnimation();
             chariloveJs.salActive();
             chariloveJs.popupMobileMenu();
             chariloveJs.searchPopup();
@@ -34,11 +34,11 @@
         },
 
 
-        aboutAnimation: function () {
-            $('.scene').each(function () {
-                new Parallax($(this)[0]);
-            });
-        },
+        // aboutAnimation: function () {
+        //     $('.scene').each(function () {
+        //         new Parallax($(this)[0]);
+        //     });
+        // },
 
         salActive: function () {
             sal({
@@ -151,12 +151,12 @@
             '<span class="icon-7"></span>'
         ],
         dots: false,
-        autoplay: true,
-        animateOut: 'fadeIn',
-        animateOut: 'fadeOut',
-        autoplayHoverPause: true,
-        autoplayTimeout: 3000,
-        smartSpeed: 1200,
+        // autoplay: true,
+        // animateOut: 'fadeIn',
+        // animateOut: 'fadeOut',
+        // autoplayHoverPause: true,
+        // autoplayTimeout: 3000,
+        // smartSpeed: 1200,
         items: 1
     });
 
@@ -208,14 +208,15 @@
 
    $('.campaign-prev-button').click(function() {
      selectorAll.trigger('prev.owl.carousel');
-   });
-   
+   });  
+     
 
      //team slider
      var teamSlider = $(".team-slider");
      teamSlider.owlCarousel({
        loop:true,
-       margin:10,
+       margin:60,
+       stagePadding: 10,
        dots: false,
        nav:true,
        navText: [
@@ -307,3 +308,27 @@
     (function($){
         new WOW().init();
     })(jQuery);
+
+    let options = {
+        startAngle: -1.55,
+        size: 90,
+        value: 0.75,
+        fill: {color: ['#ee3e3a']}
+      }
+      $(".circle .bar").circleProgress(options).on('circle-animation-progress',
+      function(event, progress, stepValue){
+        $(this).parent().find("span").text(String(stepValue.toFixed(2).substr(2)) + "%");
+      });
+      $(".circle-1 .bar").circleProgress({
+        value: 0.60,
+        fill: {color: ['#ffb862']}
+      });
+      $(".circle-2 .bar").circleProgress({
+        value: 0.45,
+        fill: {color: ['#aa41bf']}
+      }); 
+
+      $('.parallaxie').parallaxie({
+        speed: 0.3,
+        offset: 30,
+    });
