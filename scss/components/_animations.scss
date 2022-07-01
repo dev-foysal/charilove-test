@@ -141,3 +141,11 @@
 }
 
 }
+
+// circle progress bar
+
+@keyframes animationCircle {
+  100% {
+    stroke-dashoffset: 400;
+  }
+}

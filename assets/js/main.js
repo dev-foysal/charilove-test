@@ -309,24 +309,52 @@
         new WOW().init();
     })(jQuery);
 
-    let options = {
-        startAngle: -1.55,
-        size: 90,
-        value: 0.75,
-        fill: {color: ['#ee3e3a']}
-      }
-      $(".circle .bar").circleProgress(options).on('circle-animation-progress',
-      function(event, progress, stepValue){
-        $(this).parent().find("span").text(String(stepValue.toFixed(2).substr(2)) + "%");
-      });
-      $(".circle-1 .bar").circleProgress({
-        value: 0.60,
-        fill: {color: ['#ffb862']}
-      });
-      $(".circle-2 .bar").circleProgress({
-        value: 0.45,
-        fill: {color: ['#aa41bf']}
-      }); 
+    // let options = {
+    //     startAngle: -1.55,
+    //     size: 90,
+    //     value: 0.75,
+    //     fill: {color: ['#ee3e3a']}
+    //   }
+    //   $(".circle .bar").circleProgress(options).on('circle-animation-progress',
+    //   function(event, progress, stepValue){
+    //     $(this).parent().find("span").text(String(stepValue.toFixed(2).substr(2)) + "%");
+    //   });
+    //   $(".circle-1 .bar").circleProgress({
+    //     value: 0.60,
+    //     fill: {color: ['#ffb862']}
+    //   });
+    //   $(".circle-2 .bar").circleProgress({
+    //     value: 0.45,
+    //     fill: {color: ['#aa41bf']}
+    //   }); 
+
+    const block = document.querySelectorAll('.block');
+    window.addEventListener('load', function() {
+    block.forEach(item => {
+        let numElement = item.querySelector('.num');
+        let num = parseInt(numElement.innerText);
+        let count = 0;
+        let time = 2000 / num;
+        let circle = item.querySelector('.circle');
+    
+    this.setInterval(() =>{
+        if(count == num){
+        this.clearInterval();
+        }else {
+        count += 1;
+        numElement.innerText = count;
+        }
+    }, time)
+    circle.style.strokeDashoffset 
+    = 283 - ( 283 * ( num / 100));
+    let dots = item.querySelector('.dots');
+    dots.style.transform = 
+    `rotate(${360 * (num / 100)}deg)`;
+    if(num == 100){
+        dots.style.opacity = 0;
+    }
+    })
+    });
 
       $('.parallaxie').parallaxie({
         speed: 0.3,
