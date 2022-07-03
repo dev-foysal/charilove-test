@@ -103,6 +103,7 @@
 
           @media (min-width:1200px) and (max-width:1400px) {
             max-width: 260px !important;
+            padding: 15px 0px;
           }
           .card-container {
             padding: 0 10px;
@@ -139,46 +140,6 @@
               font-weight: var(--p-semi-bold);
             }
           }
-           
-          // .circle {
-          //   position: relative;
-          //   height: 90px;
-          //   width: 90px;
-          //   border-radius: 50%;
-          //   cursor: default;
-          //   margin-left: -10px;
-
-          //   .box {
-          //     position: absolute;
-          //     left: 50%;
-          //     top: 50%;
-          //     height: 80px;
-          //     width: 80px;
-          //     background: transparent;
-          //     border-radius: 50%;
-          //     border: 2px solid #e8e8e8;
-          //     transform: translate(-50%, -50%);
-          //     -webkit-transform: translate(-50%, -50%);
-          //     -moz-transform: translate(-50%, -50%);
-          //     -ms-transform: translate(-50%, -50%);
-          //     -o-transform: translate(-50%, -50%);
-
-          //     span {
-          //       position: absolute;
-          //       top: 50%;
-          //       left: 50%;
-          //       font-size: 24px;
-          //       font-family: var(--font-primary);
-          //       font-weight: var(--p-bold);
-          //       color: var(--color-dark);
-          //       transform: translate(-50%, -50%);
-          //       -webkit-transform: translate(-50%, -50%);
-          //       -moz-transform: translate(-50%, -50%);
-          //       -ms-transform: translate(-50%, -50%);
-          //       -o-transform: translate(-50%, -50%);
-          //     }
-          //   }
-          // }
           
           .block {
             position: relative;
@@ -191,6 +152,10 @@
             margin-left: -23px;
             margin-top: -10px;
             margin-bottom: -8px;
+
+            @media (min-width:991px) and (max-width:1199px) {
+              margin-left: -30px;
+            }
           }
           
           .box {
@@ -247,13 +212,13 @@
             -o-transform: translateX(-50%);
           }
           .dots-1::after {
-            background-color: red;
+            background-color: #ff0000;
           }
           .dots-2::after {
-            background-color: orange;
+            background-color: #ffa500;
           }
           .dots-3::after {
-            background-color: purple;
+            background-color: #800080;
           }
           
           .svg {
@@ -391,21 +356,6 @@
             z-index: 1;
             overflow: visible !important;
 
-            // &::before {
-            //   content: "";
-            //   position: absolute;
-            //   top: -10px;
-            //   right: 0;
-            //   width: 28px;
-            //   height: 28px;
-            //   border: double 8px transparent;
-            //   border-radius: 50%;
-            //   background-image: linear-gradient(white, white), radial-gradient(circle at top left, #ed312d,#f79a29);
-            //   background-origin: border-box;
-            //   background-clip: content-box, border-box;
-            //   display: inline-block;
-            //   box-shadow: 0px 5px 20px 0px rgba(192, 36, 33, 0.3);
-            // }
             .indicator {
               position: absolute;
               right: 0;
@@ -522,23 +472,19 @@
         margin-bottom: 35px;
   
         .card-body{
-          // padding: 30px 20px 10px 20px;
           .card-counter {
             padding: 10px 0;
   
             .text {
               font-size: 15px;
             }
-  
             .progress {
               margin: 0 auto 0 -8px;
-            }
-            
+            }  
           }
           .card-title {
             font-size: 22px;
-          }
-          
+          } 
         }
       }
     }
@@ -556,9 +502,9 @@
         margin-bottom: 35px;
   
         .card-body{
-          // padding: 30px 20px 0 20px;
+
           .card-counter {
-            width: 235px;
+            // width: 235px;
             padding: 10px 0;
   
             .text {

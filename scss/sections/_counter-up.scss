@@ -1,5 +1,12 @@
 .counter-up {
+  background: url(../../assets/images/parallex-bg.jpg);
   position: relative;
+  min-height: 480px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
 
   .counter-up-title {
     margin: 83px 0 50px 0;
@@ -14,7 +21,7 @@
   .counter-content {
     position: relative;
     z-index: 1;
-    padding: 45px 0;
+    padding: 70px 0;
     .box-01 {
       background: url(../images/counter-bg-01.png) ;
       width: 100%;
@@ -22,6 +29,14 @@
       object-fit: cover;
       background-repeat: no-repeat;
       background-position: center center;
+
+      .counter-text {
+        font-size: 22px;
+        color: var(--color-white);
+        text-align: center;
+        text-transform: capitalize;
+        margin-top: 80px;
+      }
     }
     .box-02 {
       background: url(../images/counter-bg-02.png) ;
@@ -30,6 +45,14 @@
       object-fit: cover;
       background-repeat: no-repeat;
       background-position: center center;
+
+      .counter-text {
+        font-size: 22px;
+        color: var(--color-white);
+        text-align: center;
+        text-transform: capitalize;
+        margin-top: 60px;
+      }
     }
     .box-03 {
       background: url(../images/counter-bg-03.png) ;
@@ -38,6 +61,14 @@
       object-fit: cover;
       background-repeat: no-repeat;
       background-position: center center;
+
+      .counter-text {
+        font-size: 22px;
+        color: var(--color-white);
+        text-align: center;
+        text-transform: capitalize;
+        margin-top: 80px;
+      }
     }
     .counter-box {
       padding-top: 70px;
@@ -50,16 +81,8 @@
         display: inline-block;
       }
     }
-    .counter-text {
-      font-size: 22px;
-      color: var(--color-white);
-      text-align: center;
-      text-transform: capitalize;
-    }
+    
   }
-}
-.parallaxie{
-  min-height: 450px;
 }
 
 .counter-up-two {
@@ -242,32 +265,41 @@
   @media (max-width:1024px) {
     .counter-up {
       .counter-up-title {
-        margin-top: 130px;
+        margin-top: 76px;
         padding-right: 50px;
+      }
+    }
+  }
+  @media (max-width:991px) {
+    .counter-up {
+      .counter-up-title {
+        margin: 83px 0 0 0;
       }
     }
   }
   @media (max-width:768px) {
     .counter-up {
       .counter-up-title {
-        margin-top: 70px;
+        margin-top: 50px;
         padding-right: 0;
         text-align: center !important;
+        .heading {
+          padding: 0 20px;
+        }
       }
   
       .counter-content {
-        margin-top: 25px;
-  
-        .counter-box {
-          .box-01,
+        margin-top: 0px;
+        padding: 0 0 75px 0;
+        .box-01,
           .box-02,
           .box-03 {
             
             span {
               font-size: 50px;
             }
+            
           }
-        }
       }
     }
   }

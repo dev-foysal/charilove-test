@@ -97,7 +97,7 @@
                   }
               }
               .banner-wrap-inner {
-                padding: 150px 0;
+                padding: 190px 0;
 
                 h1 {
                   color: #fff;
@@ -163,10 +163,6 @@
                 -moz-transition: .3s all ease-in-out;
                 -ms-transition: .3s all ease-in-out;
                 -o-transition: .3s all ease-in-out;
-
-                @media(max-width:1024px) {
-                  display: none;
-                }
             }
 
             .owl-prev {
@@ -174,6 +170,18 @@
             }
             .owl-next {
                 right: 80px;
+            }
+
+            @media (max-width:1600px) {
+              .owl-prev {
+                left: 30px;
+              }
+              .owl-next {
+                right: 30px;
+              }
+            }
+            @media(max-width:1120px) {
+              display: none;
             }
         }
         .owl-item {

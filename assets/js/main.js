@@ -151,12 +151,12 @@
             '<span class="icon-7"></span>'
         ],
         dots: false,
-        autoplay: true,
-        animateOut: 'fadeIn',
-        animateOut: 'fadeOut',
-        autoplayHoverPause: true,
-        autoplayTimeout: 3000,
-        smartSpeed: 1200,
+        autoplay: false,
+        // animateOut: 'fadeIn',
+        // animateOut: 'fadeOut',
+        // autoplayHoverPause: true,
+        // autoplayTimeout: 3000,
+        // smartSpeed: 1200,
         items: 1
     });
 
@@ -309,25 +309,6 @@
         new WOW().init();
     })(jQuery);
 
-    // let options = {
-    //     startAngle: -1.55,
-    //     size: 90,
-    //     value: 0.75,
-    //     fill: {color: ['#ee3e3a']}
-    //   }
-    //   $(".circle .bar").circleProgress(options).on('circle-animation-progress',
-    //   function(event, progress, stepValue){
-    //     $(this).parent().find("span").text(String(stepValue.toFixed(2).substr(2)) + "%");
-    //   });
-    //   $(".circle-1 .bar").circleProgress({
-    //     value: 0.60,
-    //     fill: {color: ['#ffb862']}
-    //   });
-    //   $(".circle-2 .bar").circleProgress({
-    //     value: 0.45,
-    //     fill: {color: ['#aa41bf']}
-    //   }); 
-
     const block = document.querySelectorAll('.block');
     window.addEventListener('load', function() {
     block.forEach(item => {
@@ -354,9 +335,4 @@
         dots.style.opacity = 0;
     }
     })
-    });
-
-      $('.parallaxie').parallaxie({
-        speed: 0.3,
-        offset: 30,
     });
