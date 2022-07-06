@@ -192,6 +192,11 @@
       -ms-transform: translate(-50%, -50%);
       -o-transform: translate(-50%, -50%);
       z-index: -1;
+      
+      img {
+        animation: rotating 5s infinite;
+      -webkit-animation: rotating 5s infinite;
+      }
     }
   
     .about-two-content-left {
@@ -285,6 +290,13 @@
 
       .about-two-content-right-text {
         padding-top: 25px;
+
+        @media (min-width:1200px) and(max-width:1399px) {
+          padding-top: 80px;
+        }
+        @media (min-width:992px) and(max-width:1199px) {
+          padding-top: 123px;
+        }
       }
 
       .about-two-content-right-thumb {

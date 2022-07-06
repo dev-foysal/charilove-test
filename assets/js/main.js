@@ -15,6 +15,7 @@
 
         methods: function (e) {
             chariloveJs.headerSticky();
+            chariloveJs.owlSlider();
             chariloveJs.aboutAnimation();
             chariloveJs.salActive();
             chariloveJs.popupMobileMenu();
@@ -31,6 +32,144 @@
                     $('.header-sticky').removeClass('sticky')
                 }
             })
+        },
+        owlSlider: function () {
+            $('.banner-owl').owlCarousel({
+                loop:true,
+                margin: 0,
+                nav:true,
+                navText: [
+                    '<span class="icon-6"></span>',
+                    '<span class="icon-7"></span>'
+                ],
+                dots: false,
+                autoplay: false,
+                // animateOut: 'fadeIn',
+                // animateOut: 'fadeOut',
+                // autoplayHoverPause: true,
+                // autoplayTimeout: 3000,
+                // smartSpeed: 1200,
+                items: 1
+            }); 
+        
+            //campaign slider
+            $('.campaign-slider').owlCarousel({
+                loop:true,
+                margin:10,
+                dots: false,
+                nav:false,
+                autoplay: false,
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    600:{
+                        items:1
+                    },
+                    1000:{
+                        items:1
+                    }
+                } 
+            });
+            var selectorAll = $('.campaign-slider');
+
+            $('.campaign-next-button').click(function() {
+                selectorAll.trigger('next.owl.carousel');
+            });
+
+            $('.campaign-prev-button').click(function() {
+                selectorAll.trigger('prev.owl.carousel');
+            });
+            //team slider
+            $(".team-slider").owlCarousel({
+                loop:true,
+                margin:60,
+                stagePadding: 10,
+                dots: false,
+                nav:true,
+                navText: [
+                    '<span class="icon-6"></span>',
+                    '<span class="icon-7"></span>'
+                ],
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    600:{
+                        items:2
+                    },
+                    1000:{
+                        items:2
+                    },
+                    1025:{
+                        items:3
+                    }
+                }
+            });
+
+             //testimonials slider home-01
+            $('.teslimonials-slider-wrap').owlCarousel({
+                loop:true,
+                margin:10,
+                dots: false,
+                nav:false,
+                autoplay: false,
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    600:{
+                        items:1
+                    },
+                    1024:{
+                        items:2
+                    },
+                    1025:{
+                        items:2
+                    }
+                    } 
+                })
+                var selectorOne = $('.teslimonials-slider-wrap');
+
+                $('.testimonial-next-button').click(function() {
+                selectorOne.trigger('next.owl.carousel');
+                });
+
+                $('.testimonial-prev-button').click(function() {
+                selectorOne.trigger('prev.owl.carousel');
+                });
+
+                //testimonials slider home-02
+            $('.teslimonials-two-slider-wrap').owlCarousel({
+                loop:true,
+                margin:10,
+                dots: false,
+                nav:false,
+                autoplay: false,
+                responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:1
+                },
+                1024:{
+                    items:1
+                },
+                1025:{
+                    items:1
+                }
+                }
+            })
+            var selectorTwo = $('.teslimonials-two-slider-wrap');
+
+            $('.testimonials-next-button').click(function() {
+                selectorTwo.trigger('next.owl.carousel');
+            });
+
+            $('.testimonials-prev-button').click(function() {
+                selectorTwo.trigger('prev.owl.carousel');
+            });
         },
 
 
@@ -130,35 +269,12 @@
 				});
 			});
         },
-
-        
-
-
     }
 
     chariloveJs.i();
 
 })(window, document, jQuery)
 
-  // banner slider 
-  var bannerVar = $('.banner-owl');
-    bannerVar.owlCarousel({
-        loop:true,
-        margin: 0,
-        nav:true,
-        navText: [
-            '<span class="icon-6"></span>',
-            '<span class="icon-7"></span>'
-        ],
-        dots: false,
-        autoplay: false,
-        // animateOut: 'fadeIn',
-        // animateOut: 'fadeOut',
-        // autoplayHoverPause: true,
-        // autoplayTimeout: 3000,
-        // smartSpeed: 1200,
-        items: 1
-    });
 
     //nav-tabs
     function tabChange() {
@@ -179,131 +295,9 @@
             $(this).tab('show')
         });
     });
-
-     //campaign slider
-   var campaignSlider = $('.campaign-slider');
-   campaignSlider.owlCarousel({
-     loop:true,
-     margin:10,
-     dots: false,
-     nav:false,
-     autoplay: false,
-     responsive:{
-         0:{
-             items:1
-         },
-         600:{
-             items:1
-         },
-         1000:{
-             items:1
-         }
-       } 
-   });
-   var selectorAll = $('.campaign-slider');
-
-   $('.campaign-next-button').click(function() {
-     selectorAll.trigger('next.owl.carousel');
-   });
-
-   $('.campaign-prev-button').click(function() {
-     selectorAll.trigger('prev.owl.carousel');
-   });  
-     
-
-     //team slider
-     var teamSlider = $(".team-slider");
-     teamSlider.owlCarousel({
-       loop:true,
-       margin:60,
-       stagePadding: 10,
-       dots: false,
-       nav:true,
-       navText: [
-         '<span class="icon-6"></span>',
-         '<span class="icon-7"></span>'
-     ],
-       responsive:{
-           0:{
-               items:1
-           },
-           600:{
-               items:2
-           },
-           1000:{
-               items:2
-           },
-           1025:{
-               items:3
-           }
-       }
-   });
+  
  
-     //testimonials slider home-01
-     var testimonialSlider = $('.teslimonials-slider-wrap');
-       testimonialSlider.owlCarousel({
-         loop:true,
-         margin:10,
-         dots: false,
-         nav:false,
-         autoplay: false,
-         responsive:{
-             0:{
-                 items:1
-             },
-             600:{
-                 items:1
-             },
-             1024:{
-                 items:2
-             },
-             1025:{
-                 items:2
-             }
-           } 
-       })
-       var selectorOne = $('.teslimonials-slider-wrap');
- 
-       $('.testimonial-next-button').click(function() {
-         selectorOne.trigger('next.owl.carousel');
-       });
- 
-       $('.testimonial-prev-button').click(function() {
-         selectorOne.trigger('prev.owl.carousel');
-       });
-
-       //testimonials slider home-02
-     var testimonialSlider = $('.teslimonials-two-slider-wrap');
-     testimonialSlider.owlCarousel({
-       loop:true,
-       margin:10,
-       dots: false,
-       nav:false,
-       autoplay: false,
-       responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:1
-        },
-        1024:{
-            items:1
-        },
-        1025:{
-            items:1
-        }
-      }
-     })
-     var selectorTwo = $('.teslimonials-two-slider-wrap');
-
-     $('.testimonials-next-button').click(function() {
-       selectorTwo.trigger('next.owl.carousel');
-     });
-
-     $('.testimonials-prev-button').click(function() {
-       selectorTwo.trigger('prev.owl.carousel');
-     });
+    
      
     (function($){
         new WOW().init();

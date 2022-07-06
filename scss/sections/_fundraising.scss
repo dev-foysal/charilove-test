@@ -82,7 +82,7 @@
             span {
               font-size: var(--font-size-b3);
               font-family: var(--font-secondary);
-              font-weight: var(--p-semi-bold);
+              font-weight: var(--p-bold);
               color: var(--color-white);
               text-transform: uppercase;
             }
@@ -387,6 +387,12 @@
             -moz-transform: translateY(-50%);
             -ms-transform: translateY(-50%);
             -o-transform: translateY(-50%);
+
+            @media (max-width:1024px) {
+              font-size: 18px;
+              left: 47%;
+              bottom: -74px;
+            }
           }
         }
 
@@ -409,6 +415,7 @@
     }
     @media (max-width:768px) {
       padding-top: 50px;
+      
 
       .card-two {
         margin-bottom: 0 !important;
@@ -492,7 +499,8 @@
   
   @media (max-width:450px) {
     .fundraising {
-      padding-bottom: 60px;
+      padding-bottom: 50px;
+      padding-top: 50px;
       .fundraising-title-content {
         .heading {
           padding: 0 72px;

@@ -127,7 +127,11 @@
             cursor: pointer;
   
             &:hover {
-              color: var(--color-primary);
+              background: rgb(237,49,45);
+              background: linear-gradient(90deg, rgba(237,49,45,1) 19%, rgba(247,154,41,1) 68%);
+              -webkit-background-clip: text;
+              background-clip: text;
+              color: transparent;
             }
           }
           .box-container {
@@ -179,7 +183,11 @@
             }
   
             &:hover {
-              color: var(--color-primary);
+              background: rgb(237,49,45);
+              background: linear-gradient(90deg, rgba(237,49,45,1) 19%, rgba(247,154,41,1) 68%);
+              -webkit-background-clip: text;
+              background-clip: text;
+              color: transparent;
               letter-spacing: 1px;
               span {
                 opacity: 1;
@@ -197,10 +205,21 @@
   }
   .blog-area-two {
     position: relative;
-    padding: 80px 0;
 
     .blog-card {
       padding-bottom: 0;
+      -webkit-border-top-left-radius: 0;
+        -webkit-border-top-right-radius: 40px;
+        -webkit-border-bottom-right-radius: 20px;
+        -webkit-border-bottom-left-radius: 40px;
+        -moz-border-radius-topleft: 0;
+        -moz-border-radius-topright: 40px;
+        -moz-border-radius-bottomright: 20px;
+        -moz-border-radius-bottomleft: 40px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 40px;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 40px;
     .blog-card-img-last {
       img {
         -webkit-border-top-left-radius: 20px;
@@ -280,7 +299,6 @@
       padding: 0;
   
       .blog-card {
-       padding-bottom: 50px;
   
         .card {
           max-width: 28rem;
@@ -317,9 +335,6 @@
           }
         }
       }
-      .blog-card-03 {
-        padding-bottom: 220px;
-      }
     }
   }
   
@@ -344,9 +359,6 @@
             }
           }
         }
-      }
-      .blog-card-03 {
-        padding-bottom: 150px;
       }
     }
   }
@@ -390,6 +402,13 @@
               font-size: 14px;
             }
           }
+        }
+      }
+    }
+    .blog-area-two {
+      .blog-card {
+        .card {
+          width: 100%;
         }
       }
     }
