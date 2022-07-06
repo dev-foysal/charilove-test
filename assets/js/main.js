@@ -43,12 +43,12 @@
                     '<span class="icon-7"></span>'
                 ],
                 dots: false,
-                autoplay: false,
-                // animateOut: 'fadeIn',
-                // animateOut: 'fadeOut',
-                // autoplayHoverPause: true,
-                // autoplayTimeout: 3000,
-                // smartSpeed: 1200,
+                autoplay: true,
+                animateOut: 'fadeIn',
+                animateOut: 'fadeOut',
+                autoplayHoverPause: true,
+                autoplayTimeout: 3000,
+                smartSpeed: 1200,
                 items: 1
             }); 
         
