@@ -202,16 +202,23 @@
   }
   .counter-right-content {
     position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
     
-
     .thumb-men {
-      margin-left: 20px;
-      // position: relative;
+      height: 100%;
+      position: absolute;
+      bottom: 0;
+      z-index: 123;
+    }
 
-      img {
-        height: 100%;
-      }
+    // .thumb-men {
+    //   margin-left: 20px;
+    //   // position: relative;
 
+      
+    // }
     .tooltip-chat {
       background: var(--color-white);
       max-width: 300px;
@@ -230,6 +237,7 @@
       position: absolute;
       top: 49%;
       left: -3%;
+      z-index: 123;
       animation: bounce 5s infinite;
       -webkit-animation: bounce 5s infinite;
       
@@ -255,7 +263,6 @@
         }
       }
     }
-    }
   
     .thumb-shape {
       position: absolute;
@@ -274,15 +281,8 @@
       top: 12%;
       z-index: -1;
     }
-
-    @media (min-width:1200px) and (max-width:1399px) {
-      bottom: -77px;
-    }
-    @media (min-width:1025px) and (max-width:1199px) {
-      bottom: -205px;
-    }
-    @media (min-width:991px) and (max-width:1024px) {
-      bottom: -138.5px;
+    @media (max-width:991px) {
+      display: none;
     }
   }
 }
@@ -297,6 +297,19 @@
     .counter-two {
       .counter-left-content {
         padding: 30px 0 70px 0;
+      }
+      .counter-right-content {
+        .thumb-men {
+          .tooltip-chat {
+            max-width: 240px;
+            padding: 10px 10px;
+            left: 0;
+            
+            h4 {
+              font-size: 20px !important;
+            }
+          }
+        }
       }
     }
   }

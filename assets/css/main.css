@@ -737,13 +737,10 @@ blockquote b {
 html {
   overflow: hidden;
   overflow-y: auto;
-  margin: 0;
-  padding: 0;
   font-size: 10px;
 }
 
 body {
-  overflow: hidden;
   font-size: var(--font-size-b2);
   line-height: var(--line-height-b2);
   -webkit-font-smoothing: antialiased;
@@ -753,6 +750,7 @@ body {
   background-color: var(--color-white);
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 h1,
@@ -1488,7 +1486,7 @@ p {
   -o-transform: translateX(-100px);
 }
 .banner-area .banner-owl .item .banner-wrap-content .banner-wrap-shape-mask img {
-  width: 1150px;
+  max-width: 1150px;
   height: 100%;
 }
 @media (min-width: 1024px) and (max-width: 1500px) {
@@ -2834,14 +2832,17 @@ p {
 }
 .counter-two .counter-right-content {
   position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 .counter-two .counter-right-content .thumb-men {
-  margin-left: 20px;
-}
-.counter-two .counter-right-content .thumb-men img {
   height: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 123;
 }
-.counter-two .counter-right-content .thumb-men .tooltip-chat {
+.counter-two .counter-right-content .tooltip-chat {
   background: var(--color-white);
   max-width: 300px;
   text-align: center;
@@ -2859,10 +2860,11 @@ p {
   position: absolute;
   top: 49%;
   left: -3%;
+  z-index: 123;
   animation: bounce 5s infinite;
   -webkit-animation: bounce 5s infinite;
 }
-.counter-two .counter-right-content .thumb-men .tooltip-chat::before {
+.counter-two .counter-right-content .tooltip-chat::before {
   content: "";
   position: absolute;
   right: 0;
@@ -2873,11 +2875,11 @@ p {
   background: var(--color-white);
   clip-path: polygon(86% 33%, 94% 16%, 100% 0, 100% 100%, 0 100%, 14% 94%, 29% 86%, 41% 78%, 55% 67%, 73% 50%);
 }
-.counter-two .counter-right-content .thumb-men .tooltip-chat h4 {
+.counter-two .counter-right-content .tooltip-chat h4 {
   font-size: 22px;
   margin: 8px 0;
 }
-.counter-two .counter-right-content .thumb-men .tooltip-chat h4 span {
+.counter-two .counter-right-content .tooltip-chat h4 span {
   color: var(--color-primary);
 }
 .counter-two .counter-right-content .thumb-shape {
@@ -2897,19 +2899,9 @@ p {
   top: 12%;
   z-index: -1;
 }
-@media (min-width: 1200px) and (max-width: 1399px) {
+@media (max-width: 991px) {
   .counter-two .counter-right-content {
-    bottom: -77px;
-  }
-}
-@media (min-width: 1025px) and (max-width: 1199px) {
-  .counter-two .counter-right-content {
-    bottom: -205px;
-  }
-}
-@media (min-width: 991px) and (max-width: 1024px) {
-  .counter-two .counter-right-content {
-    bottom: -138.5px;
+    display: none;
   }
 }
 
@@ -2921,6 +2913,14 @@ p {
 
   .counter-two .counter-left-content {
     padding: 30px 0 70px 0;
+  }
+  .counter-two .counter-right-content .thumb-men .tooltip-chat {
+    max-width: 240px;
+    padding: 10px 10px;
+    left: 0;
+  }
+  .counter-two .counter-right-content .thumb-men .tooltip-chat h4 {
+    font-size: 20px !important;
   }
 }
 @media (max-width: 991px) {
@@ -3771,11 +3771,11 @@ p {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
-  transition: all 0.5s ease-in-out;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
 }
 .footer-area .footer-left-content .footer-social-icon a:hover {
   background: #ed312d;
@@ -6150,7 +6150,7 @@ p {
     font-size: 18px;
   }
   .testimonials .testimonials-slider .testimonial-slider-content .testimonial-info h4 {
-    font-size: 22px;
+    font-size: 20px !important;
     margin-bottom: 0;
   }
 }
