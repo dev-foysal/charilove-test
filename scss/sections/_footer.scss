@@ -141,7 +141,6 @@
         font-size: var(--font-size-b3);
         color: var(--color-white);
         background: var(--color-extra05);
-        padding: 10px 12px;
         margin-right: 7px;
         border-radius: 50%;
         -webkit-border-radius: 50%;
@@ -153,16 +152,22 @@
         -moz-transition: all .3s linear;
         -ms-transition: all .3s linear;
         -o-transition: all .3s linear;
-        &:hover 
-{
+
+        &:hover {
           background: #ed312d;
 	        background:linear-gradient(to right, #ed312d 0%, #ffa940 100%);
         }
         &:nth-child(1) {
-          padding: 10px 14px;
+          padding: 14px 16px;
+        }
+        &:nth-child(2) {
+          padding: 14px 14px;
+        }
+        &:nth-child(3) {
+          padding: 14px 15px;
         }
         &:last-child {
-          padding: 10px 13px;
+          padding: 14px 16px;
         }
       }
     }
@@ -438,6 +443,71 @@
           }
         }
       }
+    }
+  }
+}
+.footer-area-three {
+  position: relative;
+  background: #141416;
+  padding-top: 100px;
+  padding-bottom: 50px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: url(../../assets/images/footer-bg-03.png);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center bottom;
+  }
+}
+.footer-bottom-three {
+  background: #101011;
+  position: relative;
+  z-index: 12;
+
+  .footer-bottom-left-content {
+    font-size: var(--font-size-b2);
+    font-family: var(--font-secondary);
+    color: var(--color-white);
+    padding: 30px 0;
+
+    a {
+      color: var(--color-white);
+      text-transform: capitalize;
+      transition: all .3s ease-in-out;
+      -webkit-transition: all .3s ease-in-out;
+      -moz-transition: all .3s ease-in-out;
+      -ms-transition: all .3s ease-in-out;
+      -o-transition: all .3s ease-in-out;
+
+      &:hover {
+        color: var(--color-primary);
+      }
+    }
+    i {
+      padding: 0 3px;
+    }
+    span {
+      text-transform: capitalize;
+    }
+  }
+
+  .footer-bottom-right-content {
+    font-size: var(--font-size-b2);
+    font-family: var(--font-secondary);
+    color: var(--color-white);
+    padding: 30px 0;
+    text-transform: capitalize;
+    text-align: end;
+
+    .ftb {
+      padding: 0 5px;
     }
   }
 }

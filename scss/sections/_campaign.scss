@@ -9,7 +9,7 @@
       position: relative;
       padding-bottom: 120px;
     
-      .item {
+      .swiper-slide {
         padding: 15px 15px;
         .card {
           -webkit-border-radius: 20px;
@@ -226,7 +226,7 @@
     .campaign-col {
       position: relative;
 
-      .campaign-owl-nav  {
+      .campaign-swiper-nav  {
         position: absolute;
         top: 50%;
         right: 90px;
@@ -269,7 +269,7 @@
   @media (max-width:1024px) {
     .campaign-bg {
       .campaign {
-        .item {
+        .swiper-slide {
           .card {
             .card-body {
               .campaign-left-content {
@@ -281,15 +281,16 @@
                   object-fit: cover;
                 }
                 .box-counter {
-                  top: 30%;
+                  top: 20%;
                 }
               }
             }
           }
         }
-        .campaign-owl-nav {
-          right: 12%;
-        }
+        
+        // .campaign-owl-nav {
+        //   right: 12%;
+        // }
       }
     } 
   }
@@ -298,7 +299,7 @@
   
       .campaign {
         padding-bottom: 0px;
-        .item {
+        .swiper-slide {
           padding: 5px;
           .card{
             .card-body{
@@ -316,7 +317,6 @@
           
                 .box-counter {
                   padding: 15px 25px;
-                  top: 20%;
                   left: -40px;
                 }
               }
@@ -330,7 +330,7 @@
   @media (max-width:450px) {
     .campaign-bg {
       .campaign {
-        .item{
+        .swiper-slide{
           .card {
             .card-body {
               .campaign-left-content {

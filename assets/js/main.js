@@ -16,6 +16,7 @@
         methods: function (e) {
             chariloveJs.headerSticky();
             chariloveJs.owlSlider();
+            chariloveJs.swiperSlider();
             chariloveJs.aboutAnimation();
             chariloveJs.salActive();
             chariloveJs.popupMobileMenu();
@@ -33,114 +34,122 @@
                 }
             })
         },
-        owlSlider: function () {
-            $('.banner-owl').owlCarousel({
-                loop:true,
-                margin: 0,
-                nav:true,
-                navText: [
-                    '<span class="icon-6"></span>',
-                    '<span class="icon-7"></span>'
-                ],
-                dots: false,
-                autoplay: true,
-                animateOut: 'fadeIn',
-                animateOut: 'fadeOut',
-                autoplayHoverPause: true,
-                autoplayTimeout: 3000,
-                smartSpeed: 1200,
-                items: 1
-            }); 
-        
-            //campaign slider
-            $('.campaign-slider').owlCarousel({
-                loop:true,
-                margin:10,
-                dots: false,
-                nav:false,
-                autoplay: false,
-                responsive:{
-                    0:{
-                        items:1
-                    },
-                    600:{
-                        items:1
-                    },
-                    1000:{
-                        items:1
-                    }
-                } 
-            });
-            var selectorAll = $('.campaign-slider');
-
-            $('.campaign-next-button').click(function() {
-                selectorAll.trigger('next.owl.carousel');
-            });
-
-            $('.campaign-prev-button').click(function() {
-                selectorAll.trigger('prev.owl.carousel');
-            });
-            //team slider
-            $(".team-slider").owlCarousel({
-                loop:true,
-                margin:60,
-                stagePadding: 10,
-                dots: false,
-                nav:true,
-                navText: [
-                    '<span class="icon-6"></span>',
-                    '<span class="icon-7"></span>'
-                ],
-                responsive:{
-                    0:{
-                        items:1
-                    },
-                    600:{
-                        items:2
-                    },
-                    1000:{
-                        items:2
-                    },
-                    1025:{
-                        items:3
-                    }
+        swiperSlider: function () {
+            var swiper = new Swiper(".bannerOne-swiper", {
+                preloadImages: false,
+                // autoplay: {
+                //     delay: 4000,
+                //     disableOnInteraction: false
+                // },
+                init: true,
+                loop: true,
+                speed: 1200,
+                grabCursor: true,
+                mousewheel: false,
+                keyboard: true,
+                simulateTouch: true,
+                parallax: true,
+                effect: "fade",
+                navigation: {
+                    nextEl: ".swiper_button_prev",
+                    prevEl: ".swiper_button_next"
                 }
             });
 
-             //testimonials slider home-01
-            $('.teslimonials-slider-wrap').owlCarousel({
-                loop:true,
-                margin:10,
-                dots: false,
-                nav:false,
-                autoplay: false,
-                responsive:{
-                    0:{
-                        items:1
-                    },
-                    600:{
-                        items:1
-                    },
-                    1024:{
-                        items:2
-                    },
-                    1025:{
-                        items:2
-                    }
-                    } 
-                })
-                var selectorOne = $('.teslimonials-slider-wrap');
+            //campaign slider
+            var swiper = new Swiper(".campaignSwiper-one-slider", {
+                loop: true,
+                speed: 1500,
+                autoHeight: false,
+                slidesPerView: 1,
+                centeredSlides: true,
+                effect: 'slide',
+                // autoplay: {
+                //     delay: 2000,
+                // },
+                Parallax:true,
+                navigation: {
+                    nextEl: ".swiper_button_prev",
+                    prevEl: ".swiper_button_next"
+                }
+            });
 
-                $('.testimonial-next-button').click(function() {
-                selectorOne.trigger('next.owl.carousel');
-                });
+            //team slider
+            var swiper = new Swiper(".teamOne-slider", {
+                loop: true,
+                slidesPerView: 1,
+                spaceBetween: 60,
+                // autoplay: {
+                //     delay: 2000,
+                // },
+                breakpoints: {
+                    480: {
+                        slidesPerView: 1,
+                        resistanceRatio: 0.85
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        resistanceRatio: 0.85
+                    },
+                    980: {
+                        slidesPerView: 3,
+                        resistanceRatio: 0.85
+                    },
+                },
+                navigation: {
+                    nextEl: ".swiper_button_prev",
+                    prevEl: ".swiper_button_next"
+                }
+            });
 
-                $('.testimonial-prev-button').click(function() {
-                selectorOne.trigger('prev.owl.carousel');
-                });
+            //testimonials slider home-01
 
-                //testimonials slider home-02
-            $('.teslimonials-two-slider-wrap').owlCarousel({
+            var swiper = new Swiper(".teslimonialsOne-slider", {
+                loop: true,
+                slidesPerView: 1,
+                spaceBetween: 30,
+                // autoplay: {
+                //     delay: 2000,
+                // },
+                breakpoints: {
+                    480: {
+                        slidesPerView: 1,
+                        resistanceRatio: 0.85
+                    },
+                    768: {
+                        slidesPerView: 1,
+                        resistanceRatio: 0.85
+                    },
+                    980: {
+                        slidesPerView: 2,
+                        resistanceRatio: 0.85
+                    },
+                },
+                navigation: {
+                    nextEl: ".swiper_button_prev",
+                    prevEl: ".swiper_button_next"
+                }
+            });
+
+            //testimonials slider home-02
+
+            var swiper = new Swiper(".teslimonialsTwo-slider", {
+                loop: true,
+                slidesPerView: 1,
+                spaceBetween: 30,
+                // autoplay: {
+                //     delay: 2000,
+                // },
+                navigation: {
+                    nextEl: ".swiper_button_prev",
+                    prevEl: ".swiper_button_next"
+                }
+            });
+        },
+        owlSlider: function () { 
+
+            //testimonials slider home-03
+            $('.teslimonials-slider-wrap-three').owlCarousel({
                 loop:true,
                 margin:10,
                 dots: false,
@@ -151,24 +160,21 @@
                     items:1
                 },
                 600:{
-                    items:1
+                    items:2
                 },
                 1024:{
-                    items:1
+                    items:3
                 },
-                1025:{
-                    items:1
-                }
                 }
             })
-            var selectorTwo = $('.teslimonials-two-slider-wrap');
+            var selectorThree = $('.teslimonials-slider-wrap-three');
 
-            $('.testimonials-next-button').click(function() {
-                selectorTwo.trigger('next.owl.carousel');
+            $('.testimonial-next-button').click(function() {
+                selectorThree.trigger('next.owl.carousel');
             });
 
-            $('.testimonials-prev-button').click(function() {
-                selectorTwo.trigger('prev.owl.carousel');
+            $('.testimonial-prev-button').click(function() {
+                selectorThree.trigger('prev.owl.carousel');
             });
         },
 

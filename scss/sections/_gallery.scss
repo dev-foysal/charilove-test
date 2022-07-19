@@ -78,3 +78,31 @@
         // }
     }
 }
+
+.gallery-three {
+    margin: 0;
+
+    .row>* {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .box-wrapper {
+        padding: 0;
+        img {
+            border-radius: 0;
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            -ms-border-radius: 0;
+            -o-border-radius: 0;
+        }
+        .box-content {
+            border-radius: 0;
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            -ms-border-radius: 0;
+            -o-border-radius: 0;
+            background: rgb(237,49,45);
+            background: linear-gradient(38deg, rgba(237,49,45,.75) 0%, rgba(255,123,0,.75) 100%);
+}
+    }
+}

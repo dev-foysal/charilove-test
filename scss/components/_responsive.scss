@@ -10,6 +10,7 @@
     .section-padding {
       padding: 50px 0 !important;
     }
+
     .container {
       padding: 0 20px !important;
     }
@@ -19,8 +20,13 @@
     .sub-heading {
       font-size: 16px !important;
     }
-
+    .sub-heading-2 {
+      font-size: 16px !important;
+    }
     .heading {
+      font-size: 40px !important;
+    }
+    .heading-2 {
       font-size: 40px !important;
     }
   }
@@ -30,6 +36,10 @@
       padding: 0 15px !important;
     }
     .heading {
+      padding: 0px 0 20px 0 !important;
+      font-size: 26px !important;
+    }
+    .heading-2 {
       padding: 0px 0 20px 0 !important;
       font-size: 26px !important;
     }

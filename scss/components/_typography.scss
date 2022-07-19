@@ -238,15 +238,36 @@ h4 {
 	background-clip: text;
 	-webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  }
+}
+.sub-heading-2 {
+    font-size: 20px;
+    font-family: var(--font-primary);
+    font-weight: var(--p-bold);
+	letter-spacing: 1.5px;
+    text-transform: uppercase;
+	background: #ed312d;
+	background:linear-gradient(to right, #ed312d 0%, #ffa940 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+}
   
-  .heading {
+  
+.heading {
     font-size: 50px;
     font-family: 'Dosis', sans-serif;
     font-weight: 700;
     color: #111117;
     line-height: 1.1;
     text-transform: capitalize;
+  }
+  .heading-2 {
+    font-size: 50px;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 700;
+    color: #111117;
+    line-height: 1.1;
+    text-transform: uppercase;
   }
 
   .section-padding {
